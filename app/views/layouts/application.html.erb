@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+
+  <%= csrf_meta_tags %>
   <title>Anastasia</title>
 </head>
-<body>
+<body ng-app>
 
 <%= yield %>
-
+<%= javascript_include_tag "application","data-turbolinks-track" => false %>
 </body>
 </html>
