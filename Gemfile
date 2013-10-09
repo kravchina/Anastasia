@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+# Gem for self_to_self relation in Category
+gem 'ancestry'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
