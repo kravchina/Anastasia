@@ -10,8 +10,15 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree ./jquery
+//= require jquery.js
+//= require underscore.js
+//= require angular.js
+//= require angular-ui-router.js
+//= require bootstrap.js
+//= require app.js
 //= require_tree ./angular
-//= require_tree ./underscore
-//= require_tree ./bootstrap
+
+
+
+
 
