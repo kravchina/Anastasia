@@ -7,6 +7,7 @@ Anastasia::Application.routes.draw do
    root 'index#index'
 
    get 'api/index/getVideos' => 'video#get_videos'
+   get 'api/index/getBooks' => 'book#get_books'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
