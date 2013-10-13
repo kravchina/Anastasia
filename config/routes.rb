@@ -10,6 +10,10 @@ Anastasia::Application.routes.draw do
    get 'api/index/getBooks' => 'book#get_books'
    get 'api/index/getArticles' => 'article#get_articles'
 
+   get 'api/category/getAll' => 'category#get_all'
+   get 'api/level/getAll' => 'level#get_all'
+   get 'api/language/getAll' => 'language#get_all'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
