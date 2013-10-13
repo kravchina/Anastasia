@@ -6,6 +6,14 @@ Anastasia::Application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'index#index'
 
+   get 'api/index/getVideos' => 'video#get_videos'
+   get 'api/index/getBooks' => 'book#get_books'
+   get 'api/index/getArticles' => 'article#get_articles'
+
+   get 'api/category/getAll' => 'category#get_all'
+   get 'api/level/getAll' => 'level#get_all'
+   get 'api/language/getAll' => 'language#get_all'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
