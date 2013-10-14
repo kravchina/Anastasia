@@ -20,9 +20,51 @@ levels = Level.create([{:name => 'Level 1'},
 languages = Language.create([{:name => 'English (United States)', :short_name => 'en-us'},
                              {:name => 'Italian (Standard)', :short_name => 'it'},
                              {:name => 'German (Standard)', :short_name => 'de'}])
+Video.create([{:title => 'First step in rickroll',
+               :head_video => "<iframe width=\"260\" height=\"195\" src=\"//www.youtube.com/embed/dQw4w9WgXcQ?rel=0\" frameborder=\"0\"></iframe>",
+               :category => categories[0],
+               :level => levels[3],
+               :language => languages[0]}])
 
-videos = Video.create([{:title => 'Code School', 
-                        :head_video => "Learn about Code School's teaching philosophy and course strategy for delivering the latest web technologies.",
-                        :category => categories[0],
-                        :level => levels[3],
-                        :language => languages[0]}])
+Video.create([{:title => 'ASP MVC Video tutorial',
+               :head_video => "<iframe width=\"260\" height=\"195\" src=\"//www.youtube.com/embed/KAKxm4eQP24?rel=0\" frameborder=\"0\"></iframe>",
+               :category => categories[0],
+               :level => levels[3],
+               :language => languages[0]}])
+
+Video.create([{:title => 'JavaScript video tutorial',
+               :head_video => "<iframe width=\"260\" height=\"195\" src=\"//www.youtube.com/embed/_cLvpJY2deo?rel=0\" frameborder=\"0\"></iframe>",
+               :category => categories[0],
+               :level => levels[3],
+               :language => languages[0]}])
+
+Book.create([{:title => 'Book header'},
+             :category => categories[0],
+             :level => levels[3],
+             :language => languages[0]]);
+
+Book.create([{:title => 'Book header'},
+             :category => categories[0],
+             :level => levels[3],
+             :language => languages[0]]);
+
+Book.create([{:title => 'Book header'},
+             :category => categories[0],
+             :level => levels[3],
+             :language => languages[0]]);
+
+Article.create([{:title => 'Article header'},
+                :category => categories[0],
+                :level => levels[3],
+                :language => languages[0]])
+
+Article.create([{:title => 'Article header'},
+                :category => categories[0],
+                :level => levels[3],
+                :language => languages[0]])
+
+Article.create([{:title => 'Article header'},
+                :category => categories[0],
+                :level => levels[3],
+                :language => languages[0]])
+
