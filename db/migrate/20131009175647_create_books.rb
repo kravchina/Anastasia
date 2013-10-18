@@ -9,6 +9,7 @@ class CreateBooks < ActiveRecord::Migration
       t.belongs_to :category
       t.belongs_to :level
       t.belongs_to :language
+      t.belongs_to :user
 
       t.timestamps
     end

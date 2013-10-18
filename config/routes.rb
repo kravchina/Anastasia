@@ -1,10 +1,25 @@
 Anastasia::Application.routes.draw do
-  get "index/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
    root 'index#index'
+   devise_for :users
+   namespace :api do
+     devise_for :user, :controllers => {sessions: 'sessions'}
+   end
+
+
+   #devise_for :user, :controllers => {sessions: 'sessions'}
+
+   #namespace :api, defaults: { format: :json } do
+   #   devise_for :users
+   #end
+
+
+   post 'api/user/register' => 'user#register'
+   post 'api/user/login' => 'user#login'
+   post 'api/user/logout' => 'user#logout'
 
    get 'api/index/getVideos' => 'video#get_videos'
    get 'api/index/getBooks' => 'book#get_books'

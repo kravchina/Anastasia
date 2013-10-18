@@ -20,6 +20,9 @@ levels = Level.create([{:name => 'Level 1'},
 languages = Language.create([{:name => 'English (United States)', :short_name => 'en-us'},
                              {:name => 'Italian (Standard)', :short_name => 'it'},
                              {:name => 'German (Standard)', :short_name => 'de'}])
+
+User.create([:email => 'murmur@mail.ru'])
+
 Video.create([{:title => 'First step in rickroll',
                :head_video => "<iframe width=\"260\" height=\"195\" src=\"//www.youtube.com/embed/dQw4w9WgXcQ?rel=0\" frameborder=\"0\"></iframe>",
                :category => categories[0],
