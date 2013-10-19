@@ -9,6 +9,9 @@ gem 'sqlite3'
 # Gem for self_to_self relation in Category
 gem 'ancestry'
 
+# Gem allows to orginize pagination in ActiveRecord::Base
+gem 'will_paginate', '~> 3.0'
+
 # Gem for storing session of Users
 gem 'activerecord-session_store'
 

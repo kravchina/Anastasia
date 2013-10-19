@@ -1,8 +1,5 @@
 class BookController < ApplicationController
   def get_books
-    options = [:category_id, :level_id, :language_id]
-    query = params.select { |key, value| options.include? key.to_sym }
-
-    render :json => query.length ? Book.where(query) : Book.all
+    render :json => ResourceHelper.get_resources(Book, params)
   end
 end
