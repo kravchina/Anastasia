@@ -12,6 +12,8 @@ gem 'ancestry'
 # Gem allows to orginize pagination in ActiveRecord::Base
 gem 'will_paginate', '~> 3.0'
 
+gem 'faker'
+
 # Gem for storing session of Users
 gem 'activerecord-session_store'
 

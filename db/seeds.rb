@@ -7,22 +7,27 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Category.delete_all
 categories = Category.create([{:name => 'IT', :sort_index => 0}, 
                               {:name => 'Сookery', :sort_index => 1},
                               {:name => 'Geodesy', :sort_index => 2}])
 
+Level.delete_all
 levels = Level.create([{:name => 'Level 1'},
                        {:name => 'Level 2'},
                        {:name => 'Level 3'},
                        {:name => 'Level 4'},
                        {:name => 'Level 5'}])
 
+Language.delete_all
 languages = Language.create([{:name => 'English (United States)', :short_name => 'en-us'},
                              {:name => 'Italian (Standard)', :short_name => 'it'},
                              {:name => 'German (Standard)', :short_name => 'de'}])
 
+User.delete_all
 User.create([:email => 'murmur@mail.ru'])
 
+Video.delete_all
 Video.create([{:title => 'First step in rickroll',
                :head_video => "<iframe width=\"260\" height=\"195\" src=\"//www.youtube.com/embed/dQw4w9WgXcQ?rel=0\" frameborder=\"0\"></iframe>",
                :category => categories[0],
@@ -41,6 +46,19 @@ Video.create([{:title => 'JavaScript video tutorial',
                :level => levels[3],
                :language => languages[0]}])
 
+Book.delete_all
+BOOK_COUNT = 50
+
+BOOK_COUNT.times do |i|
+  Book.create(:title => Faker::Lorem.sentence(1 + Random.rand(9)),
+              :author => "#{Faker::Name.first_name} #{Faker::Name.last_name}",
+              :description => Faker::Lorem.paragraph(1 + Random.rand(5)),
+              :isbn => Faker::Code.isbn,
+              :cover => Faker::Internet.url,
+              :category => categories[Random.rand(categories.length)],
+              :level => levels[Random.rand(levels.length)],
+              :language => languages[Random.rand(languages.length)])
+end
 Book.create([:title => 'JavaScript: The Definitive Guide: Activate Your Web Pages',
               :author => 'David Flanagan',
               :description => 'Since 1996, JavaScript: The Definitive Guide has been the bible for JavaScript programmers—a programmers guide and comprehensive reference to the core language and to the client-side JavaScript APIs defined by web browsers.
@@ -73,6 +91,7 @@ In this fourth edition, the core model-view-controller (MVC) architectural conce
              :level => levels[3],
              :language => languages[0]]);
 
+Article.delete_all
 Article.create([:title => 'Как я не взломал «Хабрахабр» или 10+ активных XSS',
                  :link => 'http://habrahabr.ru/post/197672/',
                  :description => 'Увидев как все ринулись искать XSS на прекрасно-синем Хабрахабре решил попытать свое счастье. POST-овые self-xss, бесполезные во многих контекстах и векторах, начиная с фильтрации в самых популярных браузеров (chrome/safari/ie etc) и заканчивая сложностью их же применения и эксплуатации было решено оставить остальным первопроходцам и отправиться на поиски чего-то более стоящего.',
