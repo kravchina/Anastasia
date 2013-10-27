@@ -1,6 +1,6 @@
 application.controller('HomeIndexCtrl', function HomeIndexCtrl($scope, apiConnector) {
 
-    var REFRESH_TIME = 10000;
+    var REFRESH_TIME = 60000;
 
     function getBooks() {
         apiConnector.get('/index/randomBooks')
@@ -30,5 +30,5 @@ application.controller('HomeIndexCtrl', function HomeIndexCtrl($scope, apiConnec
     setInterval(getBooks, REFRESH_TIME);
     setInterval(getVideos, REFRESH_TIME);
     setInterval(getArticles, REFRESH_TIME);
-})
-  
+});
+

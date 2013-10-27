@@ -11,6 +11,10 @@ Category.delete_all
 categories = Category.create([{:name => 'IT', :sort_index => 0}, 
                               {:name => 'Сookery', :sort_index => 1},
                               {:name => 'Geodesy', :sort_index => 2}])
+it = categories[0]
+
+Category.create([{:name => 'Programming', :sort_index => 1, :parent => it}])
+Category.create([{:name => 'Administrating', :sort_index => 0, :parent => it}])
 
 Level.delete_all
 levels = Level.create([{:name => 'Level 1'},

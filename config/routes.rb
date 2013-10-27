@@ -27,6 +27,7 @@ Anastasia::Application.routes.draw do
    get 'api/index/getArticles' => 'article#get_articles'
 
    get 'api/category/getAll' => 'category#get_all'
+   get 'api/category/getCategories' => 'category#get_categories'
    get 'api/level/getAll' => 'level#get_all'
    get 'api/language/getAll' => 'language#get_all'
    get 'templates/home' => 'high_voltage/pages#show', id: 'home'
