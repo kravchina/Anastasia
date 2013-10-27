@@ -23,6 +23,7 @@ Anastasia::Application.routes.draw do
 
    get 'api/index/getVideos' => 'video#get_videos'
    get 'api/index/getBooks' => 'book#get_books'
+   get 'api/index/randomBooks' => 'book#random_books'
    get 'api/index/getArticles' => 'article#get_articles'
 
    get 'api/category/getAll' => 'category#get_all'

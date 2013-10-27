@@ -1,23 +1,34 @@
 application.controller('HomeIndexCtrl', function HomeIndexCtrl($scope, apiConnector) {
 
-    apiConnector
-        .get('/index/getBooks')
-        .success(function(data){
-            $scope.books = data;
-        });
+    var REFRESH_TIME = 10000;
 
-    apiConnector
-        .get('/index/getVideos')
-        .success(function(data){
-            $scope.videos = data;
-        });
+    function getBooks() {
+        apiConnector.get('/index/randomBooks')
+                    .success(function(data) {
+                        $scope.books = data;
+                    });
+    };
 
-    apiConnector
-        .get('/index/getArticles')
-        .success(function(data){
-            $scope.articles = data;
-        });
+    function getVideos() {
+        apiConnector.get('/index/getVideos')
+                    .success(function(data) {
+                        $scope.videos = data;
+                    });
+    };
 
+    function getArticles() {
+        apiConnector.get('/index/getArticles')
+                    .success(function(data) {
+                        $scope.articles = data;
+                    });
+    };
 
+    getBooks();
+    getVideos();
+    getArticles();
+
+    setInterval(getBooks, REFRESH_TIME);
+    setInterval(getVideos, REFRESH_TIME);
+    setInterval(getArticles, REFRESH_TIME);
 })
   
