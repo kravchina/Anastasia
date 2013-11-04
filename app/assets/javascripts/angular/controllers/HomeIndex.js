@@ -1,4 +1,6 @@
-application.controller('HomeIndexCtrl', function HomeIndexCtrl($scope, apiConnector) {
+application.controller('HomeIndexCtrl', function HomeIndexCtrl($scope, apiConnector, $stateParams) {
+
+    console.log($stateParams);
 
     apiConnector
         .get('/index/getBooks')

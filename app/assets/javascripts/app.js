@@ -17,5 +17,16 @@ application.config(function($stateProvider, $routeProvider, $urlRouterProvider){
                     templateUrl: "/templates/index/sidebar.html"
                 }
             }
+        })
+        .state('index.search', {
+            url : '/search/:id',
+            views : {
+                "contentView": {
+                    templateUrl: "/templates/index/content.html",
+                    controller: function($stateParams){
+                        console.log($stateParams);
+                    }
+                }
+            }
         });
 });
