@@ -14,7 +14,8 @@ application.config(function($stateProvider, $routeProvider, $urlRouterProvider){
                     controller: "HomeIndexCtrl"
                 },
                 "sidebarView": {
-                    templateUrl: "/templates/index/sidebar.html"
+                    templateUrl: "/templates/index/sidebar.html",
+                    controller: "SideBarCtrl"
                 }
             }
         })

@@ -1,8 +1,11 @@
 class BookController < ApplicationController
   def get_books
-    options = [:category_id, :level_id, :language_id]
-    query = params.select { |key, value| options.include? key.to_sym }
+    render :json => ResourceHelper.get_resources(Book, params)
+  end
 
-    render :json => query.length ? Book.where(query) : Book.all
+  def random_books
+    count = params[:count] | 5
+    
+    render :json => Book.limit(5).order("random()")
   end
 end

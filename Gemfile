@@ -9,6 +9,17 @@ gem 'sqlite3'
 # Gem for self_to_self relation in Category
 gem 'ancestry'
 
+# Gem allows to orginize pagination in ActiveRecord::Base
+gem 'will_paginate', '~> 3.0'
+
+gem 'faker'
+
+# Gem for storing session of Users
+gem 'activerecord-session_store'
+
+# Gem for User authentification and User model
+gem 'devise'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
