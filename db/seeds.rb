@@ -33,19 +33,19 @@ User.create([:email => 'murmur@mail.ru'])
 
 Video.delete_all
 Video.create([{:title => 'First step in rickroll',
-               :head_video => "<iframe width=\"260\" height=\"195\" src=\"//www.youtube.com/embed/dQw4w9WgXcQ?rel=0\" frameborder=\"0\"></iframe>",
+               :head_video => "<iframe width=\"220\" height=\"165\" src=\"//www.youtube.com/embed/dQw4w9WgXcQ?rel=0\" frameborder=\"0\"></iframe>",
                :category => categories[0],
                :level => levels[3],
                :language => languages[0]}])
 
 Video.create([{:title => 'ASP MVC Video tutorial',
-               :head_video => "<iframe width=\"260\" height=\"195\" src=\"//www.youtube.com/embed/KAKxm4eQP24?rel=0\" frameborder=\"0\"></iframe>",
+               :head_video => "<iframe width=\"220\" height=\"165\" src=\"//www.youtube.com/embed/KAKxm4eQP24?rel=0\" frameborder=\"0\"></iframe>",
                :category => categories[0],
                :level => levels[3],
                :language => languages[0]}])
 
 Video.create([{:title => 'JavaScript video tutorial',
-               :head_video => "<iframe width=\"260\" height=\"195\" src=\"//www.youtube.com/embed/_cLvpJY2deo?rel=0\" frameborder=\"0\"></iframe>",
+               :head_video => "<iframe width=\"220\" height=\"165\" src=\"//www.youtube.com/embed/_cLvpJY2deo?rel=0\" frameborder=\"0\"></iframe>",
                :category => categories[0],
                :level => levels[3],
                :language => languages[0]}])

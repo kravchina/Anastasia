@@ -1,4 +1,6 @@
-application.controller('HomeIndexCtrl', function HomeIndexCtrl($scope, apiConnector) {
+application.controller('HomeContentCtrl', function HomeContentCtrl($scope, apiConnector, $stateParams) {
+
+    console.log($stateParams);
 
     var REFRESH_TIME = 60000;
 
@@ -26,9 +28,9 @@ application.controller('HomeIndexCtrl', function HomeIndexCtrl($scope, apiConnec
     getBooks();
     getVideos();
     getArticles();
-
+/*
     setInterval(getBooks, REFRESH_TIME);
     setInterval(getVideos, REFRESH_TIME);
-    setInterval(getArticles, REFRESH_TIME);
+    setInterval(getArticles, REFRESH_TIME);*/
 });
 
