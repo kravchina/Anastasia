@@ -17,8 +17,4 @@
 //= require bootstrap.js
 //= require app.js
 //= require_tree ./angular
-
-
-
-
-
+//= require_tree ./ui
