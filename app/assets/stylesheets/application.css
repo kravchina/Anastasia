@@ -9,9 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require_tree ./
  *= require bootstrap
  */
+
+ .main {
+    padding-top: 15px;
+ }
 
  .panel-header {
     background-color: #F5F5F5;
@@ -30,7 +34,6 @@
     background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
     border-radius: 4px 4px 4px 4px;
-    margin: 15px 0;
     padding: 39px 19px 14px;
     position: relative;
 }

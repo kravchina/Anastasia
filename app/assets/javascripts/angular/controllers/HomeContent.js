@@ -2,10 +2,7 @@ application.controller('HomeContentCtrl', function HomeContentCtrl($scope, apiCo
 
     console.log($stateParams);
 
-    this.categories = [null];
-
     var REFRESH_TIME = 60000;
-    var treeDataSource = new CategoriesDataSource(apiConnector, categoryLoaded);
 
     function categoryLoaded(data) {
         console.log(data);

@@ -26,6 +26,7 @@ application.controller("CategoryNavigatorCtrl", function($scope, apiConnector, $
         var $this = this;
         $compile(templateHTML)(scope, function(clonedElement, scope) {
             var domElement = $this.holder.append(clonedElement);
+            clonedElement.hide();
         });
     }
 
@@ -38,7 +39,10 @@ application.controller("CategoryNavigatorCtrl", function($scope, apiConnector, $
                 while (this.dropDowns.length > i)
                 {
                     temp = this.dropDowns[i];
-                    temp.element.remove();
+                    temp.element.fadeOut(800, function() {
+                        this.remove();
+                    });
+
                     this.dropDowns.splice(i, 1);
                 }                
             }
@@ -76,9 +80,11 @@ application.directive('category', function() {
             scope.openDropDown = function() {
             }
 
-            scope.selectCategory = function(categoryId) {
+            scope.selectCategory = function(category) {
                 categoryCtrl.removeCategoryDropDown(scope.category);
-                categoryCtrl.selectCategory(categoryId, scope);
+                categoryCtrl.selectCategory(category.id, scope);
+
+                scope.selected = category;
             }
 
             categoryCtrl.loadCategory(function(data) {
